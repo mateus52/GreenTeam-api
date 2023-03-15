@@ -1,4 +1,4 @@
-package com.santos.greenteam.entity;
+package com.santos.greenteam.entity.enums;
 
 public enum ResultadoEnum {
 

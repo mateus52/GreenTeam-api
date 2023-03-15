@@ -1,10 +1,8 @@
 package com.santos.greenteam.DTO;
 
 import java.io.Serializable;
-import java.util.Date;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+import com.santos.greenteam.entity.Partidas;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -25,20 +23,29 @@ public class PartidaFuturaDTO implements Serializable {
 	
 	private String statusPartdida;
 	
-	@NotBlank
-	private String EquipeCasa;
+	private String timeCasa;
 	
-	private String urLogoEquipeCasa;
+	private String urlLogoTimeCasa;
 
-	@NotBlank
-	private String EquipeVisitante;
+	private String timeVisitante;
 	
-	private String urLogoEquipeVisitantea;
+	private String urLogoTimeVisitante;
+
+	private String dataPartida;
 	
-	@NotNull
-	private Date dataHoraPartida;
-	
-	@NotBlank
 	private String horaPartida;
+
+	public PartidaFuturaDTO(Partidas obj) {
+		super();
+		statusPartdida = obj.getStatusPartdida();
+		timeCasa = obj.getTimeCasa();
+		urlLogoTimeCasa = obj.getUrlLogoTimeCasa();
+		timeVisitante = obj.getTimeVisitante();
+		urLogoTimeVisitante = obj.getUrLogoTimeVisitante();
+		dataPartida = obj.getDataPartida();
+		horaPartida = obj.getHoraPartida();
+	}
+	
+	
 
 }

@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 import javax.validation.constraints.NotBlank;
 
+import com.santos.greenteam.entity.Campeonato;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,13 +15,18 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class MetodoDTO implements Serializable{/**
+public class CampeonatoDTO implements Serializable{/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	
 	@NotBlank
-	private String nomeMetodo;
+	private String nomeCampeonato;
+
+	public CampeonatoDTO(Campeonato obj) {
+		nomeCampeonato = obj.getNomeCampeonato();
+	}
+	
 	
 
 }
